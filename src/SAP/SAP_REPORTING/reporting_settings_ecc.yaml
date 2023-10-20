@@ -1,0 +1,233 @@
+bq_independent_objects:
+- sql_file: NetDueDateCalc.sql
+  type: script
+- sql_file: CurrencyConversion.sql
+  description: Exchange Rate for Currency Conversion
+  type: view
+- sql_file: fiscal_period.sql
+  type: script
+- sql_file: fiscal_case1.sql
+  type: script
+- sql_file: fiscal_case2.sql
+  type: script
+- sql_file: fiscal_case3.sql
+  type: script
+- sql_file: currency_decimal.sql
+  type: script
+- sql_file: currency_conversion.sql
+  type: script
+- sql_file: PlantsMD.sql
+  description: PlantsMD Details
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: MaterialGroupsMD.sql
+  description: Material Groups Master Data
+  type: table
+  table_setting:
+    load_frequency: '@monthly'
+- sql_file: VendorsMD.sql
+  description: Vendor Master Data
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: DistributionChannelsMD.sql
+  description: Distribution Channel Details
+  type: table
+  table_setting:
+    load_frequency: '@monthly'
+- sql_file: CompaniesMD.sql
+  description: Company Master Data
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: SalesOrganizationsMD.sql
+  description: Sales Organization
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: StorageLocationsMD.sql
+  description: StorageLocations Text
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: CustomersMD.sql
+  description: Customer Master Data
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: Languages_T002.sql
+  description: Languages (T002)
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: MaterialsMD.sql
+  description: Materials Master Data
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: MaterialTypesMD.sql
+  description: Material Types and texts
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: CountriesMD.sql
+  description: Countries Master Data
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: DivisionsMD.sql
+  description: Divisions Master Data
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: PurchasingOrganizationsMD.sql
+  description: Purchasing Organizations Text
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: MaterialPlantsMD.sql
+  description: MaterialPlantsMD
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: PurchasingGroupsMD.sql
+  description: Purchasing Groups Text
+  type: table
+  table_setting:
+    load_frequency: '@yearly'
+- sql_file: PricingConditions.sql
+  description: Pricing Conditions
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: MaterialsBatchMD.sql
+  description: Materials Batch Master Data
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: StockCharacteristicsConfig.sql
+  description: Stock Characteristics Config
+  type: script
+- sql_file: OneTouchOrder.sql
+  description: One Touch Order Reporting
+  type: view
+bq_dependent_objects:
+- sql_file: PurchaseDocuments.sql
+  description: Purchase Documents Header and Items
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: PurchaseDocumentsHistory.sql
+  description: Purchase Documents - Order History
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: InvoiceDocuments_Flow.sql
+  description: Incoming Invoice (Invoice Receipt) Header, Item, & Account Assignment.
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: Deliveries.sql
+  description: Deliveries Master Data
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: SalesOrders_V2.sql
+  description: Sales Orders Header and Items
+  type: table
+  table_setting:
+    load_frequency: '*/10 * * * *'
+- sql_file: POSchedule.sql
+  description: Purchase Order Schedule
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: DueDateForCashDiscount1.sql
+  type: script
+- sql_file: DueDateForCashDiscount2.sql
+  type: script
+- sql_file: AccountingDocuments.sql
+  description: Accounting Documents Headers and Items
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: AccountingDocumentsReceivable.sql
+  description: AR Accounting Documents Reporting
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: Billing.sql
+  description: Billing Master Data
+  type: table
+  table_setting:
+    load_frequency: '@hourly'
+- sql_file: SalesOrderHeaderStatus.sql
+  description: Sales Order Header Status
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: SalesOrderPartnerFunction.sql
+  description: Sales Order Partner Function
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: SalesOrderScheduleLine.sql
+  description: Sales Orders Schedule Line
+  type: table
+  table_setting:
+    load_frequency: '@hourly'
+- sql_file: VendorConfig.sql
+  description: Vendor Config
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: MaterialLedger.sql
+  description: Material Ledger
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+- sql_file: SalesOrderPricing.sql
+  description: Sales Orders Pricing
+  type: table
+  table_setting:
+    load_frequency: '@hourly'
+- sql_file: StockWeeklySnapshots.sql
+  description: Stock Weekly Snapshots
+  type: script
+- sql_file: StockMonthlySnapshots.sql
+  description: Stock Monthly Snapshots
+  type: script
+- sql_file: InventoryKeyMetrics.sql
+  type: table
+  table_setting:
+    load_frequency: '@weekly'
+    cluster_details:
+      columns:
+      - CompanyCode_BUKRS
+      - FiscalYear
+- sql_file: InventoryByPlant.sql
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+    cluster_details:
+      columns:
+      - CompanyCode_BUKRS
+      - FiscalYear
+- sql_file: AccountsPayable.sql
+  type: table
+  table_setting:
+    load_frequency: '@daily'
+    partition_details:
+      column: PostingDateInTheDocument_BUDAT
+      partition_type: time
+      time_grain: day
+    cluster_details:
+      columns:
+      - CompanyCode_BUKRS
+      - FiscalYear_GJAHR
+      - DocFiscPeriod
+- sql_file: AccountsPayableTurnover.sql
+  type: view
+- sql_file: DaysPayableOutstanding.sql
+  type: view

@@ -1,0 +1,27 @@
+{
+    "testData": true,
+    "deploySAP": true,
+    "turboMode": true,
+    "projectIdSource": "",
+    "projectIdTarget": "",
+    "location": "US",
+    "targetBucket": "",
+    "languages": [
+        "E",
+        "S"
+    ],
+    "currencies": [
+        "USD"
+    ],
+    "SAP": {
+        "deployCDC": true,
+        "datasets": {
+            "cdc": "",
+            "raw": "",
+            "ml": "ML_MODELS",
+            "reporting": "REPORTING"
+        },
+        "SQLFlavor": "ecc",
+        "mandt": "100"
+    }
+}

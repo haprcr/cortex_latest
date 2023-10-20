@@ -1,0 +1,53 @@
+{
+    "cdc":{
+        "1":
+        {
+            "s4": ["tcurf", "t001l", "t023t", "marc", "t134", "t001k", "tcurx", "matdoc", "t002", 
+                "t134t", "t009b", "mch1", "tcurr", "mbewh", "t009", "t001w", "mbew", "makt", "t001", "mara", "t023", "t179t", "t179", "ckmlcr",
+                "ckmlhd"],
+            "ecc": ["t134", "marc", "tcurf", "t009", "t002", "ckmlhd", "t134t", "mara", "t023t", "t001w", "t001k", "t023", "tcurr", 
+                "t001", "t001l", "tcurx", "mseg", "mch1", "ckmlcr", "makt", "t009b", "mbew", "mbewh", "t179t", "t179"]
+        },
+        "2":{
+            "s4": ["t023t", "rseg", "t001", "ckmlhd", "t023", "bkpf", "rbco", "ekko", "adrc", 
+                    "tcurf", "rbkp", "mara", "matdoc", "tcurr", "t134", "t134t", "ckmlcr", 
+                     "ekpo", "t001w", "ekbe", "eket", "tvarvc", "t002", "bseg", "t009b", "makt", "t009", 
+                    "t001k", "lfa1", "t024e", "t024", "tcurx", "kna1", "t001l","dd03l", "t179", "t179t"],
+            "ecc": ["t024e", "t009", "t002", "t024", "ekpo", "bkpf", "t001", "tcurf", "mbew", 
+                    "kna1", "ekbe", "t023t", "t001l", "mbewh", "mara", "prps", "t001w", "eket", "bseg", 
+                    "t009b", "t134", "mseg", "ekko", "adrc", "tcurx", "tcurr", "rbco", "rseg", "t023", 
+                    "lfa1", "makt", "t134t", "tvarvc", "rbkp", "t001k","dd03l", "t179", "t179t"]
+        },
+        "3":{
+            "s4": ["vbpa", "vbak", "t002", "adrc", "t001", "tcurx", "t005t", "vbep", "tspa", "tvtwt", "t005", "makt", "lips", "prcd_elements", "vbrp", 
+                "vbap", "tvtw", "tvko", "kna1", "likp", "tvkot", "tspat", "tcurr", "vbrk", "tcurf", "mara"],
+            "ecc": ["vbpa", "t005", "tvkot", "tcurf", "makt", "vbep", "vbuk", "lips", "t002", "tcurr", "likp", "t005t", "mara", "konv", "kna1", "tspa", 
+                "vbrk", "tvtw", "vbak", "vbrp", "tvko", "t001", "tspat", "adrc", "tvtwt", "vbap", "tcurx"]
+        }
+    },
+    "reporting":{
+        "1":["CompaniesMD", "currency_decimal", "InventoryKeyMetrics", "StockWeeklySnapshots", "weekly_inventory_aggregation", 
+                "InventoryByPlant", "PlantsMD", "UpdateStockWeeklySnapshots", "CurrencyConversion", "MaterialLedger", 
+                "StorageLocationsMD", "StockCharacteristicsConfig",
+                "Fiscal_Period", "SlowMovingThreshold", "stock_characteristics_config", "MaterialsBatchMD", "Fiscal_Case1", "MaterialTypesMD", 
+                "StockMonthlySnapshots", "Fiscal_Case2", "MaterialGroupsMD", "Languages_T002", "AggregateWeeklyInventory", "Fiscal_Case3",
+                 "MaterialsMD", "fiscal_period", "MaterialPlantsMD", "fiscal_case1", "fiscal_case3", "fiscal_case2", "currency_conversion", 
+                 "SlowMovingThreshold", "CustomersMD"],
+
+        "2":["AccountingDocumentsReceivable", "fiscal_period", "fiscal_case1", "fiscal_case2", "fiscal_case3", "AccountingDocuments", 
+            "NetDueDateCalc", "DueDateForCashDiscount1", "DueDateForCashDiscount2", "currency_decimal", "CustomersMD", "CompaniesMD", 
+            "CurrencyConversion", "PurchaseDocumentsHistory", "AccountsPayable", 
+            "VendorsMD", "VendorConfig", "InvoiceDocuments_Flow", "currency_conversion", "StockMonthlySnapshots", "MaterialGroupsMD",
+            "SlowMovingThreshold", "PlantsMD", "StorageLocaionsMD", "MaterialsMD", 
+            "DaysPayableOutstanding", "InventoryKeyMetrics", "MaterialTypesMD", "AccountsPayableTurnover", 
+            "Languages_T002", "currencyDecimal", "StockCharacteristicsConfig", 
+            "MaterialLedger", "PurchasingOrganizationsMD", "PurchaseDocuments", "PurchasingGroupsMD", "POSchedule", "StorageLocationsMD",
+            "language_map", "materials_valuation_v2", "VendorPerformance", "SlowMovingThreshold"],
+
+        "3": ["DivisionsMD", "OneTouchOrder", "SalesOrderHeaderStatus", "SalesOrders_V2", "PricingConditions", 
+        "SalesOrderPartnerFunction", "CountriesMD", "SalesOrganizationsMD", "CustomersMD", "SalesOrderScheduleLine", "Billing",
+        "CurrencyConversion", "SalesOrderPricing", "DistributionChannelsMD", "currency_decimal",
+        "Deliveries", "Languages_T002", "MaterialsMD", "currency_conversion"]
+    }
+}
+

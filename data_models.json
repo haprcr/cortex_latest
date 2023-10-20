@@ -1,0 +1,244 @@
+{
+    "AccountingDocumentsReceivable":{
+        "cdc":{
+            "ecc":["tcurx", "t009b", "bkpf", "bseg", "t009", "adrc", "t001", "kna1"],
+            "s4":["bseg", "t009", "bkpf", "t009b", "tcurx", "adrc", "t001", "kna1"]
+        },
+        "reporting":["fiscal_case2", "DueDateForCashDiscount2", "fiscal_period", "DueDateForCashDiscount1", "NetDueDateCalc", 
+                    "CompaniesMD", "CustomersMD", "currency_decimal",  "fiscal_case1", "AccountingDocuments",
+                    "fiscal_case3", "AccountingDocumentsReceivable"],
+        "external_dag":[]
+    },
+    "CurrencyConversion":{
+        "cdc":{
+            "ecc":["tcurr", "tcurf"],
+            "s4":["tcurr", "tcurf"]
+        },
+        "reporting":["CurrencyConversion", "currency_conversion"],
+        "external_dag":["currency_conversion"]
+    },
+    "currency_decimal":{
+        "cdc":{
+            "ecc":["tcurf"],
+            "s4":["tcurf"]
+        },
+        "reporting":["currency_decimal"],
+        "external_dag":["currency_conversion"]
+    },
+    "AccountsPayable":{
+        "cdc":{
+            "ecc":["prps", "tcurr", "bseg", "adrc", "rbco", "lfa1", "rbkp", "ekbe", "bkpf", "tcurf", "tcurx", "rseg", "t001", "tvarvc", "t009", "t009b"],
+            "s4":["adrc", "lfa1", "rbkp", "tvarvc", "rseg", "tcurr", "rbco", "bkpf", "tcurx", "t001", "tcurf", "bseg", "ekbe", "t009b", "t009"]
+        },
+        "reporting":["DueDateForCashDiscount1", "PurchaseDocumentsHistory", "NetDueDateCalc", "VendorsMD", 
+                        "CurrencyConversion", "currency_decimal", "InvoiceDocuments_Flow", "CompaniesMD", "AccountingDocuments", 
+                        "VendorConfig", "DueDateForCashDiscount2", "AccountsPayable", "fiscal_period", "fiscal_case1", "fiscal_case2", "fiscal_case3"],
+        "external_dag":["currency_conversion"]
+    },
+    "AccountsPayableTurnover":{
+        "cdc":{
+            "ecc":["prps", "tcurr", "bseg", "adrc", "rbco", "lfa1", "rbkp", "ekbe", "bkpf", "tcurf", "tcurx", "rseg", "t001", "tvarvc", "t009", "t009b"],
+            "s4":["adrc", "lfa1", "rbkp", "tvarvc", "rseg", "tcurr", "rbco", "bkpf", "tcurx", "t001", "tcurf", "bseg",  "ekbe", "t009b", "t009"]
+        },
+        "reporting":["DueDateForCashDiscount1", "PurchaseDocumentsHistory", "NetDueDateCalc", "VendorsMD",  
+                        "CurrencyConversion", "currency_decimal", "InvoiceDocuments_Flow", "CompaniesMD", "AccountingDocuments", 
+                        "VendorConfig", "DueDateForCashDiscount2", "AccountsPayableTurnover", "AccountsPayable", "fiscal_period", "fiscal_case1", "fiscal_case2", "fiscal_case3"],
+        "external_dag":["currency_conversion"]
+    },
+    "DaysPayableOutstanding": {
+        "cdc":{
+            "ecc":["rseg", "tcurf", "mara", "makt", "mbew", "rbkp", "t001w", "mbewh", "bseg", "ekbe", "tvarvc", "adrc", 
+                    "prps", "t001", "t134", "tcurr", "t002", "t001k", "t023t", "rbco", "mseg", "t134t", "t001l", "tcurx", 
+                    "bkpf", "t023", "t009b", "t009", "lfa1"],
+
+            "s4":["tcurr", "tcurf", "t001k", "ckmlcr", "matdoc", "rbkp", "tcurx", "rseg", "t009b", "bseg", "tvarvc", "t023t", 
+                    "ckmlhd", "t002", "rbco", "t001l", "t001w", "bkpf", "t134t", "t001", "mara", "makt", "t023", 
+                    "t009", "t134", "adrc", "lfa1", "ekbe"]
+        },
+        "reporting":["DueDateForCashDiscount1", "MaterialTypesMD", "NetDueDateCalc", "StockCharacteristicsConfig", 
+                    "AccountsPayableTurnover", "CompaniesMD", "StockMonthlySnapshots", "fiscal_case2", "PurchaseDocumentsHistory", 
+                    "fiscal_period", "PlantsMD", "VendorConfig", "fiscal_case1", "Languages_T002", "InvoiceDocuments_Flow", 
+                    "VendorsMD", "InventoryKeyMetrics", "CurrencyConversion", "fiscal_case3", 
+                    "currency_decimal", "DaysPayableOutstanding", "SlowMovingThreshold", "MaterialGroupsMD", 
+                    "MaterialsMD", "DueDateForCashDiscount2", "MaterialLedger", "AccountingDocuments", "AccountsPayable", "StorageLocationsMD"],
+        "external_dag": ["currency_conversion", "inventory_snapshots"]
+
+    },
+    "CashDiscountUtilization": {
+        "cdc":{
+            "ecc":["prps", "tcurr", "bseg", "adrc", "rbco", "lfa1", "rbkp", "ekbe", "bkpf", "tcurf", "tcurx", "rseg", "t001", "tvarvc", "t009", "t009b"],
+            "s4":["adrc", "lfa1", "rbkp", "tvarvc", "rseg", "tcurr", "rbco", "bkpf", "tcurx", "t001", "tcurf", "bseg", "ekbe", "t009b", "t009"]
+        },
+        "reporting":["DueDateForCashDiscount1", "PurchaseDocumentsHistory", "NetDueDateCalc", "VendorsMD",  
+                        "CurrencyConversion", "currency_decimal", "InvoiceDocuments_Flow", "CompaniesMD", "AccountingDocuments", 
+                        "VendorConfig", "DueDateForCashDiscount2", "AccountsPayable", "fiscal_period", "fiscal_case1", "fiscal_case2", "fiscal_case3"],
+        "external_dag":["currency_conversion", "inventory_snapshots"]
+    },
+    "VendorPerformance": {
+        "cdc":{
+            "ecc":["t024", "makt", "lfa1", "t009", "adrc", "ekbe", "ekko", "tcurr", "tcurf", "tcurx", "t002", "eket", "t001", 
+                    "mara", "ekpo", "t134t", "t134", "t009b", "t024e"],
+            "s4":["makt", "lfa1", "tcurr", "tcurf", "t134t", "t002", "t001", "eket", "mara", "t024", "tcurx", "ekbe", "t009", 
+                    "t024e", "ekko", "t134", "adrc", "t009b", "ekpo"]
+        },
+        "reporting":["fiscal_case3", "PurchaseDocuments", "VendorsMD", "Languages_T002", "MaterialTypesMD", "PurchaseDocumentsHistory", 
+                        "fiscal_case2", "POSchedule", "CompaniesMD", "fiscal_case1", "currency_decimal", "MaterialsMD", 
+                        "PurchasingGroupsMD", "CurrencyConversion", "PurchasingOrganizationsMD", "fiscal_period"],
+        "external_dag":["currency_conversion"]
+    }, 
+    "MaterialLedger": {
+        "cdc":{
+            "ecc":["mbew", "t001k", "t001", "mbewh", "t001k", "t001", "tcurf", "tcurx"],
+            "s4":["ckmlhd", "ckmlcr", "t001k", "t001", "tcurf", "tcurx"]
+        },
+        "reporting":["currency_decimal", "MaterialLedger"],
+        "external_dag":["currency_conversion"]
+    },
+    "Languages_T002":{
+        "cdc":{
+            "ecc":["t002"],
+            "s4":["t002"]
+        },
+        "reporting":["Languages_T002"],
+        "external_dag":[]
+    },
+    "InventoryByPlant": {
+        "cdc":{
+            "ecc":["t134t", "marc", "mseg", "mara", "t009b", "mbew", "mbewh", "t002", "makt", "t009", "t023t", "tcurr", "mch1", "t001l", 
+                    "t001k", "tcurf", "t134", "t001", "tcurx", "t023", "t001w"],
+            "s4":["t023t", "t001k", "t134", "t001w", "t009", "mch1", "t002", "tcurr", "mara", "matdoc", "t023", "marc", "makt", 
+                    "t001", "ckmlcr", "t009b", "t001l", "ckmlhd", "t134t", "tcurx"]
+        },
+        "reporting":["fiscal_case3", "StockWeeklySnapshots", "MaterialPlantsMD", "PlantsMD", "CompaniesMD", "MaterialGroupsMD", 
+                "MaterialTypesMD", "fiscal_period", "weekly_inventory_aggregation", "MaterialsBatchMD", 
+                "stock_characteristics_config", "MaterialsMD", "fiscal_case1", "AggregateWeeklyInventory", "MaterialLedger", 
+                "currency_decimal", "UpdateStockWeeklySnapshots", "fiscal_case2", "StorageLocationsMD", 
+                "Languages_T002", "CurrencyConversion", "InventoryByPlant"],
+        "external_dag": ["inventory_snapshots", "currency_conversion"]
+    },
+    "InventoryKeyMetrics": {
+        "cdc":{
+            "ecc":["tcurx", "t001k", "t009b", "mara", "tcurr", "t023", "t134", "t001", "t009", "tcurf", "t001w", "t023t", "mbewh", 
+                    "makt", "t134t", "t001l", "t002", "mseg", "mbew"],
+            "s4":["t023t", "ckmlhd", "mara", "t134", "ckmlcr", "t009b", "t001w", "t001k", "t134t", "t001", 
+                "t023", "t001l", "tcurr", "t009", "t002", "matdoc", "makt", "tcurx", "tcurf"]
+        },
+        "reporting":["MaterialLedger", "Languages_T002", "SlowMovingTreshold", "fiscal_case2", "CompaniesMD", "currencyDecimal", 
+                    "PlantsMD", "MaterialsMD", "fiscal_case1", "StockCharacteristicsConfig", "currency_decimal", "fiscal_case3", 
+                    "StorageLocaionsMD", "MaterialTypesMD", "MaterialGroupsMD", "StockMonthlySnapshots", "CurrencyConversion", 
+                    "fiscal_period", "StorageLocationsMD", "InventoryKeyMetrics"],
+        "external_dag": ["inventory_snapshots", "currency_conversion"]
+    },
+    "SalesOrders_V2": {
+        "cdc": {
+            "ecc": ["tcurx", "vbap", "vbak"],
+            "s4": ["tcurx", "vbap", "vbak"]
+        },
+        "reporting": ["currency_decimal", "SalesOrders_V2"],
+        "external_dag":[]
+    },
+    "Deliveries": {
+        "cdc": {
+            "ecc": ["tcurx", "likp", "lips"],
+            "s4": ["tcurx", "likp", "lips"]
+        },
+        "reporting": ["currency_decimal", "Deliveries"],
+        "external_dag":[]
+    },
+    "Billing": {
+        "cdc": {
+            "ecc": ["vbrk", "vbrp", "tcurx", "konv"],
+            "s4": ["vbrp", "tcurx", "prcd_elements", "vbrk"]
+        },
+        "reporting": ["currency_decimal", "Billing"],
+        "external_dag":[]
+    },
+    "MaterialsMD": {
+        "cdc": {
+            "ecc": ["mara", "makt"],
+            "s4": ["mara", "makt"]
+        },
+        "reporting": ["MaterialsMD"],
+        "external_dag":[]
+    },
+    "CustomersMD": {
+        "cdc": {
+            "ecc": ["kna1", "adrc"],
+            "s4": ["kna1", "adrc"]
+        },
+        "reporting": ["CustomersMD"],
+        "external_dag":[]
+    },
+    "CountriesMD": {
+        "cdc": {
+            "ecc": ["t005", "t005t"],
+            "s4": ["t005", "t005t"]
+        },
+        "reporting": ["CountriesMD"],
+        "external_dag":[]
+    },
+    "SalesOrganizationsMD":{
+        "cdc": {
+            "ecc": ["tvko", "t001", "tvkot"],
+            "s4": ["tvko", "t001", "tvkot"]
+        },
+        "reporting": ["SalesOrganizationsMD"],
+        "external_dag":[]
+    },
+    "DistributionChannelsMD": {
+        "cdc": {
+            "ecc": ["tvtw", "tvtwt"],
+            "s4": ["tvtw", "tvtwt"]
+        },
+        "reporting": ["DistributionChannelsMD"],
+        "external_dag":[]
+    },
+    "SalesOrderPricing": {
+        "cdc": {
+            "ecc": ["konv", "tcurf", "tcurx"],
+            "s4": ["prcd_elements", "tcurf", "tcurx"]
+        },
+        "reporting": ["PricingConditions", "currency_decimal", "SalesOrderPricing"],
+        "external_dag":[]
+    },
+    "OneTouchOrder": {
+        "cdc": {
+            "ecc": ["vbrp"],
+            "s4": ["vbrp"]
+        },
+        "reporting": ["OneTouchOrder"],
+        "external_dag":[]
+    },
+    "SalesOrderScheduleLine": {
+        "cdc": {
+            "ecc": ["vbep"],
+            "s4": ["vbep"]
+        },
+        "reporting": ["SalesOrderScheduleLine"],
+        "external_dag":[]
+    },
+    "DivisionsMD": {
+        "cdc": {
+            "ecc": ["tspa", "tspat"],
+            "s4": ["tspa", "tspat"]
+        },
+        "reporting": ["DivisionsMD"],
+        "external_dag":[]
+    },
+    "SalesOrderHeaderStatus": {
+        "cdc": {
+            "ecc": ["vbuk"],
+            "s4": ["vbak"]
+        },
+        "reporting": ["SalesOrderHeaderStatus"],
+        "external_dag":[]
+    },
+    "SalesOrderPartnerFunction": {
+        "cdc": {
+            "ecc": ["vbpa"],
+            "s4": ["vbpa"]
+        },
+        "reporting": ["SalesOrderPartnerFunction"],
+        "external_dag":[]
+    }
+}

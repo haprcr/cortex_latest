@@ -1,0 +1,31 @@
+{
+    "testData": true,
+    "deploySFDC": true,
+    "turboMode": true,
+    "projectIdSource": "",
+    "projectIdTarget": "",
+    "targetBucket": "",
+    "location": "US",
+    "languages": [
+        "E",
+        "S"
+    ],
+    "currencies": [
+        "USD"
+    ],
+    "k9": {
+        "datasets": {
+            "processing": "K9_PROCESSING"
+        }
+    },
+    "SFDC": {
+        "deployCDC": true,
+        "createMappingViews": true,
+        "createPlaceholders": true,
+        "datasets": {
+            "cdc": "",
+            "raw": "",
+            "reporting": "REPORTING"
+        }
+    }
+}
