@@ -50,46 +50,69 @@ For finer-grained control, you can opt to deploy specific Data Models from the l
 27. **SalesOrderPartnerFunction**
 
 
+### Deployment Steps
+
+Here's the content formatted into a README-compatible layout:
+
+---
+
 ## Deployment Steps
 
-Follow these steps to set up Selective Deployment with the Cortex Framework:
+### Setting Up Configuration Files
 
-1. **Copy Files to CDC Folder:**
-   - Copy the file `cdc_settings_standard.yaml` and `selective_deployment_cdc.py` into the `src/SAP/SAP_CDC/` folder.
+To ensure that the required configuration and script files are correctly placed in their respective folders for effective use of the Cortex Framework's Selective Deployment feature, follow these steps:
 
-2. **Copy File to Reporting Config Folder:**
-   - Copy the file `reporting_settings_local_k9_standard.yaml` into the `src/SAP/SAP_REPORTING/config/` folder.
+1. Execute the `copy_files.sh` script to copy the necessary files. Ensure the script is executable by running the following command:
+   
+   ```bash
+   chmod +x copy_files.sh
+   ```
 
-3. **Copy Files to Reporting Folder:**
-   - Copy the following files to the `src/SAP/SAP_REPORTING/` folder:
-      - `reporting_settings_ecc_standard.yaml`
-      - `reporting_settings_s4_standard.yaml`
-      - `selective_deployment_reporting.py`
-    
-4. **Copy Files to the main folder:**
-  - Copy the following files to the `cortex-data-foundation/` folder:
-   - `data_models.json`
-   - `functional_modules.json`
-   - `selective_deploy.sh`
+   The `copy_files.sh` script performs the following tasks:
+
+   - **Copy Files to CDC Folder:**
+     - Copy the file `cdc_settings_standard.yaml` and `selective_deployment_cdc.py` into the `src/SAP/SAP_CDC/` folder.
+
+   - **Copy File to Reporting Config Folder:**
+     - Copy the file `reporting_settings_local_k9_standard.yaml` into the `src/SAP/SAP_REPORTING/config/` folder.
+
+   - **Copy Files to Reporting Folder:**
+     - Copy the following files to the `src/SAP/SAP_REPORTING/` folder:
+       - `reporting_settings_ecc_standard.yaml`
+       - `reporting_settings_s4_standard.yaml`
+       - `selective_deployment_reporting.py`
+
+   - **Copy Files to the Main Folder:**
+     - Copy the following files to the `cortex-data-foundation/` folder:
+       - `data_models.json`
+       - `functional_modules.json`
+       - `selective_deploy.sh`
 
 These steps will ensure that the required configuration and script files are correctly placed in the respective folders, enabling you to use the Selective Deployment feature of the Cortex Framework effectively.
 
+--------
 
 ## Performing Selective Deployment
 
-After completing the deployment steps mentioned above, you can proceed to perform Selective Deployment with the Cortex Framework. Follow the steps below for Functional Area and Data Models deployment:
+After completing the initial setup, you can proceed to perform Selective Deployment using the Cortex Framework. Below are the steps for deploying Functional Areas and Data Models:
 
 ### Functional Area Deployment
 
-1. Execute the `selective_deploy.sh` script.
+1. Make the `selective_deploy.sh` script executable by running the following command:
 
-2. When prompted, choose option 4 for Cortex Selective Deployment.
+   ```bash
+   chmod +x selective_deploy.sh
+   ```
+   
+2. Execute the `selective_deploy.sh` script.
 
-3. Select option 2 for Functional Area(s) Deployment.
+3. When prompted, choose option 4 for Cortex Selective Deployment.
 
-4. Type "Y" to confirm your intent to perform Selective Deployment for Functional Areas.
+4. Select option 2 for Functional Area(s) Deployment.
 
-5. Enter either 0 or 1 to proceed as per your selection.
+5. Type "Y" to confirm your intent to perform Selective Deployment for Functional Areas.
+
+6. Enter either 0 or 1 to proceed as per your selection.
 
 ### Data Models Deployment
 
